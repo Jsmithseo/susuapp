@@ -177,6 +177,23 @@ body {
   }
 }
 
+
+.callout {
+ font-size: 75px; 
+ font-weight: 600;
+}
+
+.callouttext {
+  color: #02CD08;
+}
+
+.hero-welcome-wrapper {
+  padding-top: 3rem;
+}
+
+
+
+
 @media only screen and (max-width: 768px) {
   .hero-welcome-wrapper.d-flex.justify-content-end.col-md-5 {
     display: none !important;

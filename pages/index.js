@@ -9,7 +9,6 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 // import MaterialContactform from './components/MaterialContactform';
 import Link from 'next/link';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Row, Col, Button } from 'reactstrap';
 
@@ -46,30 +45,25 @@ export default function Index() {
   };
   return (
     <Container>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <Row>
-        <Col md="5" sm="12" xs="12" className="hero-welcome-wrapper d-flex justify-content-end">
-          <img className="mx-5 justify-content-end" style={{height:"500px" ,width:"275px"}} src="/images/device.png" />
-        </Col>
+  
         <Col
-          md="7"
+          md="7" lg="7" sm="12"
           className="hero-welcome-wrapper d-flex align-items-center justify-content-start"
         >
           <div className="hero-welcome-main">
             <div className="hero-welcome-text">
-              <h2 className="display-4 text-black">
-                Solano SuSu
-              </h2>
-              <h6 className="display-6 text-black">
-                A Community Savings App
-              </h6>
+              <h2 className="display-4 callout">Achieve <span className="callouttext">Savings Goals</span> With Community</h2>
+              <h6 className="display-6 text-black"></h6>
               <p className="lead text-black font-weight-light">
                 {' '}
                 <span>
-                "Susus" thrive on the power of community. Friends, family members, and like-minded individuals come together, contributing money regularly. Here's the magic: Each member takes turns receiving the entire pooled amount. It's a simple yet effective way to save and provide mutual financial support within your social network.
+                  "Susus" thrive on the power of community. Friends, family
+                  members, and like-minded individuals come together,
+                  contributing money regularly. Here's the magic: Each member
+                  takes turns receiving the entire pooled amount. It's a simple
+                  yet effective way to save and provide mutual financial support
+                  within your social network.
                   {/* <Typed
                     loop
                     strings={ROLES}
@@ -88,7 +82,7 @@ export default function Index() {
                 </span> */}
               </p>
             </div>
-            <Button color="primary" size="lg">
+            <Button style={{backgroundColor: "#02CD08", color:"black"}} size="lg">
               Learn More
             </Button>{' '}
             <div className="hero-welcome-bio">
@@ -110,6 +104,18 @@ export default function Index() {
                   </div> */}
             </div>
           </div>
+        </Col>
+
+        <Col
+          md="5"
+          sm="12"
+          xs="12"
+          className="hero-welcome-wrapper d-flex justify-content-end"
+        >
+          <img
+            style={{ height: '500px', width: '275px' }}
+            src="/images/device.png"
+          />
         </Col>
       </Row>
     </Container>

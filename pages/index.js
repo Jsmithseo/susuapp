@@ -128,8 +128,9 @@ export default function Index() {
         </Col>
       </Row>
       <Col md="12"
-          sm="12"
-          xs="12"
+          lg="12"
+          sm="8"
+          xs="8"
           className="power-text d-flex justify-content-end"><b> Powered By: &nbsp;  </b> <Link href="https://onyxcreativelabs.com"> Onyx Creative Labs </Link></Col>
     </Container>
   );

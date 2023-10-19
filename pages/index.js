@@ -28,6 +28,7 @@ const ROLES = [
   'Local Initiatives and Startups',
 ];
 
+
 export default function Index() {
   const MainStyle = {
     overflowX: 'hidden',

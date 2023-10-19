@@ -1,0 +1,46 @@
+{
+  "name": "susuapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.10",
+    "@stripe/stripe-js": "^2.1.0",
+    "bootstrap": "^5.3.1",
+    "mdb-react-ui-kit": "^6.3.0",
+    "next": "^13.4.19",
+    "nodemailer": "^6.9.5",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^18.2.0",
+    "react-iframe": "^1.8.5",
+    "react-typed": "^1.2.0",
+    "reactstrap": "^9.2.0",
+    "styled-components": "^6.0.7"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "semi": true
+  },
+  "devDependencies": {
+    "prettier": "^3.0.1"
+  }
+}

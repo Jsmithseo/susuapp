@@ -52,7 +52,7 @@ body {
   color: #ffffff;
   font-weight: bold;
   letter-spacing: 2px;
-  background-color: #02CD08;
+  background-color: #02cd08;
   padding: 0.25em;
 }
 
@@ -177,14 +177,13 @@ body {
   }
 }
 
-
 .callout {
- font-size: 5rem; 
- font-weight: 600;
+  font-size: 5rem;
+  font-weight: 600;
 }
 
 .callouttext {
-  color: #02CD08;
+  color: #02cd08;
 }
 
 .hero-welcome-wrapper {
@@ -194,7 +193,14 @@ body {
   font-size: 20px;
 }
 
+.investorLink {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
 
+.linkStyles {
+  color: #0000ee;
+}
 
 @media only screen and (max-width: 768px) {
   .hero-welcome-wrapper.d-flex.justify-content-end.col-md-5 {
@@ -205,7 +211,6 @@ body {
   }
 
   .callout {
-    font-size: 4rem; 
-   }
-   
+    font-size: 4rem;
+  }
 }

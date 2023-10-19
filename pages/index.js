@@ -9,8 +9,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 // import MaterialContactform from './components/MaterialContactform';
 import Link from 'next/link';
-import Typed from "react-typed";
-
+import Typed from 'react-typed';
 
 import { Row, Col, Button } from 'reactstrap';
 
@@ -30,7 +29,6 @@ const ROLES = [
   'Local Initiatives and Startups',
 ];
 
-
 export default function Index() {
   const MainStyle = {
     overflowX: 'hidden',
@@ -49,14 +47,18 @@ export default function Index() {
   return (
     <Container>
       <Row>
-  
         <Col
-          md="7" lg="7" sm="12"
+          md="7"
+          lg="7"
+          sm="12"
           className="hero-welcome-wrapper d-flex align-items-center justify-content-start"
         >
           <div className="hero-welcome-main">
             <div className="hero-welcome-text">
-              <h2 className="display-4 callout">Achieve <span className="callouttext">Savings Goals</span> With Community</h2>
+              <h2 className="display-4 callout">
+                Achieve <span className="callouttext">Savings Goals</span> With
+                Community
+              </h2>
               <h6 className="display-6 text-black"></h6>
               <p className="lead text-black font-weight-light">
                 {' '}
@@ -89,11 +91,30 @@ export default function Index() {
             </div>
             <br></br>
             <Link href="/info">
-            <Button style={{backgroundColor: "#fff", color:"#02CD08", fontFamily:"avenir"}} size="lg">
-              Learn More
-            </Button>{' '}
+              <Button
+                style={{
+                  backgroundColor: '#fff',
+                  color: '#02CD08',
+                  fontFamily: 'avenir',
+                }}
+                size="lg"
+              >
+                Learn More
+              </Button>{' '}
             </Link>
-        
+            <Link href="/earlyaccess">
+              <Button
+                style={{
+                  backgroundColor: '#fff',
+                  color: '#000',
+                  fontFamily: 'avenir',
+                }}
+                size="lg"
+              >
+                Early Access
+              </Button>{' '}
+            </Link>
+
             <div className="hero-welcome-bio">
               <p className="mb-2 text-white">
                 * *only availible to downlad via chrome browser
@@ -127,11 +148,19 @@ export default function Index() {
           />
         </Col>
       </Row>
-      <Col md="12"
-          lg="12"
-          sm="8"
-          xs="8"
-          className="power-text d-flex justify-content-end"><b> Powered By: &nbsp;  </b> <Link href="https://onyxcreativelabs.com"> Onyx Creative Labs </Link></Col>
+      <Col
+        md="12"
+        lg="12"
+        sm="8"
+        xs="8"
+        className="power-text d-flex justify-content-end"
+      >
+        <b> Powered By: &nbsp; </b>{' '}
+        <Link className="linkStyles" href="https://onyxcreativelabs.com">
+          {' '}
+          Onyx Creative Labs{' '}
+        </Link>
+      </Col>
     </Container>
   );
 }

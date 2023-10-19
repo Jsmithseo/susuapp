@@ -85,7 +85,7 @@ export default function Index() {
             </div>
             <br></br>
             <Link href="/thankyou">
-            <Button style={{backgroundColor: "#02CD08", color:"black", fontFamily:"avenir"}} size="lg">
+            <Button style={{backgroundColor: "#fff", color:"#02CD08", fontFamily:"avenir"}} size="lg">
               Learn More
             </Button>{' '}
             </Link>

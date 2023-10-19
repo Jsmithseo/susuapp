@@ -83,9 +83,13 @@ export default function Index() {
                 </span> */}
               </p>
             </div>
-            <Button style={{backgroundColor: "#02CD08", color:"black"}} size="lg">
+            <br></br>
+            <Link href="/thankyou">
+            <Button style={{backgroundColor: "#02CD08", color:"black", fontFamily:"avenir"}} size="lg">
               Learn More
             </Button>{' '}
+            </Link>
+        
             <div className="hero-welcome-bio">
               <p className="mb-2 text-white">
                 * *only availible to downlad via chrome browser

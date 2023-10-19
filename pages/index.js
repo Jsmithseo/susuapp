@@ -9,6 +9,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 // import MaterialContactform from './components/MaterialContactform';
 import Link from 'next/link';
+import Typed from "react-typed";
+
 
 import { Row, Col, Button } from 'reactstrap';
 
@@ -65,7 +67,9 @@ export default function Index() {
                   takes turns receiving the entire pooled amount. It's a simple
                   yet effective way to save and provide mutual financial support
                   within your social network.
-                  {/* <Typed
+                  <br></br>
+                  <br></br>
+                  <Typed
                     loop
                     strings={ROLES}
                     typeSpeed={50}
@@ -75,7 +79,7 @@ export default function Index() {
                     showCursor
                     className="self-typed"
                     cursorChar="|"
-                  ></Typed>{' '} */}
+                  ></Typed>{' '}
                 </span>
                 <br></br>
                 {/* <span className="h3">

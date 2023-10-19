@@ -31,15 +31,15 @@ export default function Thankyou() {
               <h2>What is a Susu Program?</h2>
               <p>A "Susu," known as a "Rotating Savings and Credit Association" (ROSCA) in some regions, is a traditional and widely practiced financial arrangement found in numerous cultures worldwide. It's a time-tested method for individuals, often with strong social bonds, to collectively save and provide mutual financial support.</p>
               <h3>How It Operates:</h3>
-              <p>At the core of a Susu program is a sense of community and collaboration. Here's how it works:</p>
+              <i><p>At the core of a Susu program is a sense of community and collaboration. Here's how it works</p></i>
               <ol>
                 <li><b>Formation:</b> A group of individuals, whether friends, family members, or community members, forms a Susu. This group is typically small, but it can vary in size depending on the participants' preferences.</li>
                 <li><b>Regular Contributions:</b> Members of the Susu commit to making regular contributions of money into a shared pool. The contributions can be weekly, bi-weekly, monthly, or based on a predetermined schedule.</li>
                 <li><b>Rotation:</b> The uniqueness of a Susu lies in the rotation process. At each rotation, one member from the group receives the total pooled amount. This rotation continues until every member has had their turn.</li>
                 <li><b>Payout:</b>The member receiving the payout can use the funds for various purposes, such as addressing financial emergencies, investing, purchasing goods, starting a business, or funding education. Importantly, they remain committed to the Susu, continuing their regular contributions even after receiving their payout.</li>
               </ol>
-              <span>Key Advantages:</span>
-              <p>Participating in a Susu program offers several benefits:</p>
+              <h2>Key Advantages:</h2>
+              <i><p>Participating in a Susu program offers several benefits:</p></i>
               <ol>
                 <li><b>Proven Effectiveness:</b>Susus have been successfully practiced for generations in various cultures. Their enduring popularity is a testament to their effectiveness.</li>
                 <li><b>Community and Trust:</b> Susus strengthen social bonds, foster trust among members, and create a sense of community.</li>

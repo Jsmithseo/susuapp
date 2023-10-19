@@ -63,7 +63,7 @@ export default function Index() {
                   contributing money regularly. Here's the magic: Each member
                   takes turns receiving the entire pooled amount. It's a simple
                   yet effective way to save and provide mutual financial support
-                  within your social network
+                  within your social network.
                   {/* <Typed
                     loop
                     strings={ROLES}

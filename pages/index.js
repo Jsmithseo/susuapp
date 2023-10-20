@@ -151,8 +151,8 @@ export default function Index() {
       <Col
         md="12"
         lg="12"
-        sm="5"
-        xs="5"
+        sm="9"
+        xs="9"
         className="power-text d-flex justify-content-end"
       >
         <b> Powered By: &nbsp; </b>{' '}

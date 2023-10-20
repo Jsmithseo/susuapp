@@ -137,7 +137,7 @@ export default function Index() {
         </Col>
 
         <Col
-          md="5"
+          md="4"
           sm="12"
           xs="12"
           className="hero-welcome-wrapper d-flex justify-content-end"

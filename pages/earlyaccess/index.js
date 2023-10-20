@@ -60,7 +60,11 @@ export default function EarlyAccess() {
 
           <h3>How to Get Early Access: </h3>
           <p>
-          We'll send you an email to help you get started on your journey to early access. To become an early access user and unlock the future of our app, simply complete the provided form. We'll walk you through the process, allowing you to dive into the app's potential and actively contribute to its development.
+            We'll send you an email to help you get started on your journey to
+            early access. To become an early access user and unlock the future
+            of our app, simply complete the provided form. We'll walk you
+            through the process, allowing you to dive into the app's potential
+            and actively contribute to its development.
           </p>
         </div>
 

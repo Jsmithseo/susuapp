@@ -47,6 +47,18 @@ export default function Index() {
   return (
     <Container>
       <Row>
+        <Col md="7" lg="7" sm="8">
+          <div className="logo">
+            <img
+              style={{ height: '40px', width: '40px' }}
+              src="/images/logo.png"
+            />
+          </div>
+        </Col>
+        <Col md="7" lg="7" sm="2" className=" justify-content-start">
+          <div>SuSuFi</div>
+        </Col>
+
         <Col
           md="7"
           lg="7"

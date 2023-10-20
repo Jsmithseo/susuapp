@@ -65,7 +65,7 @@ export default function Thankyou() {
                   member has had their turn.
                 </li>
                 <li>
-                  <b>Payout:</b>The member receiving the payout can use the
+                  <b>Payout:</b> The member receiving the payout can use the
                   funds for various purposes, such as addressing financial
                   emergencies, investing, purchasing goods, starting a business,
                   or funding education. Importantly, they remain committed to
@@ -79,7 +79,7 @@ export default function Thankyou() {
               </i>
               <ol>
                 <li>
-                  <b>Proven Effectiveness:</b>Susus have been successfully
+                  <b>Proven Effectiveness:</b> Susus have been successfully
                   practiced for generations in various cultures. Their enduring
                   popularity is a testament to their effectiveness.
                 </li>
@@ -93,12 +93,12 @@ export default function Thankyou() {
                   don't have to worry about interest payments or charges.
                 </li>
                 <li>
-                  <b>Flexible Goals:</b>Susus can be customized to meet
+                  <b>Flexible Goals:</b> Susus can be customized to meet
                   different financial goals, from short-term needs to long-term
                   investments.
                 </li>
                 <li>
-                  <b>Financial Empowerment:</b>They empower individuals and
+                  <b>Financial Empowerment:</b> They empower individuals and
                   communities, providing a financial safety net for unexpected
                   expenses and opportunities.
                 </li>

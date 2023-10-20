@@ -24,7 +24,7 @@ const ROLES = [
   'Retirees and Seniors',
   'Community Members',
   'Philanthropic Individuals',
-  'Nature and Conservation Enthusiasts:',
+  'Nature and Conservation Enthusiasts',
   'Disability',
   'Local Initiatives and Startups',
 ];

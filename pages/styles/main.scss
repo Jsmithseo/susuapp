@@ -203,7 +203,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .hero-welcome-wrapper.d-flex.justify-content-end.col-md-5 {
+  .hero-welcome-wrapper.d-flex.justify-content-end {
     display: none !important;
   }
   .main-section {

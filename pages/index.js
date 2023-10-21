@@ -46,7 +46,7 @@ export default function Index() {
   };
   return (
     <Container>
-      <Row>
+      <Row className="brandContainer">
         <Col md="7" lg="7" sm="8">
           <div className="logo">
             <img
@@ -56,7 +56,7 @@ export default function Index() {
           </div>
         </Col>
         <Col md="7" lg="7" sm="2" className=" justify-content-start">
-          <div>SuSuFi</div>
+          <div className="brandname">SuSuFi</div>
         </Col>
 
         <Col

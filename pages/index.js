@@ -52,6 +52,7 @@ export default function Index() {
             <img
               style={{ height: '40px', width: '40px' }}
               src="/images/logo.png"
+              onError={e => { e.currentTarget.src = "/images/logo.png"; }}
             />
           </div>
         </Col>

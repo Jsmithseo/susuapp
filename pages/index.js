@@ -56,10 +56,6 @@ export default function Index() {
             />
           </div>
         </Col>
-        <Col md="7" lg="7" sm="2" className=" justify-content-start">
-          <div className="brandname">SuSuFi</div>
-        </Col>
-
         <Col
           md="7"
           lg="7"

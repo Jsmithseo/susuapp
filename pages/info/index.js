@@ -114,6 +114,7 @@ export default function Thankyou() {
                 network.
               </p>
             </div>
+            
           </Col>
           {/* <Link href="#">
             <Col className="investorLink" md="12" lg="12">

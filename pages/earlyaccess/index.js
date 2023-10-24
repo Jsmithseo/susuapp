@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col } from 'reactstrap';
 import Image from 'next/image';
 import Link from 'next/link';
-import EarlyAccessForm from '../components/EarlyAccessForm';
+// import EarlyAccessForm from '../components/EarlyAccessForm';
 
 const MainStyle = {
   overflowX: 'hidden',
@@ -68,7 +68,7 @@ export default function EarlyAccess() {
           </p>
         </div>
 
-        <EarlyAccessForm />
+        {/* <EarlyAccessForm /> */}
       </Container>
     </div>
   );

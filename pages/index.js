@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 // import MaterialContactform from './components/MaterialContactform';
 import Link from 'next/link';
 import Typed from 'react-typed';
+import BaseLayout from './components/layouts/BaseLayouts.js';
 
 import { Row, Col, Button } from 'reactstrap';
 
@@ -45,90 +46,84 @@ export default function Index() {
     fontFamily: 'avenir',
   };
   return (
-    <Container>
-      <Row className="brandContainer">
-        <Col md="7" lg="7" sm="8">
-          <div className="logo">
-            <img
-              style={{ height: '50px', width: '50px' }}
-              src="/images/logo.png"
-              onError={e => { e.currentTarget.src = "/images/logo.png"; }}
-            />
-          </div>
+    <BaseLayout>
+      <Container>
+        <Row className="brandContainer">
+          <Col md="7" lg="7" sm="8">
         </Col>
-        <Col
-          md="7"
-          lg="7"
-          sm="12"
-          className="hero-welcome-wrapper d-flex align-items-center justify-content-start"
-        >
-          <div className="hero-welcome-main">
-            <div className="hero-welcome-text">
-              <h2 className="display-4 callout">
-                Achieve <span className="callouttext">Savings Goals</span> With
-                Community
-              </h2>
-              <h6 className="display-6 text-black"></h6>
-              <p className="lead text-black font-weight-light">
-                {' '}
-                <span>
-                  "Susus" thrive on the power of community. Friends, family
-                  members, and like-minded individuals come together,
-                  contributing money regularly. Here's the magic: Each member
-                  takes turns receiving the entire pooled amount. It's a simple
-                  yet effective way to save and provide mutual financial support
-                  within your social network.
+          <Col
+            md="7"
+            lg="7"
+            sm="12"
+            className="hero-welcome-wrapper d-flex align-items-center justify-content-start"
+          >
+            <div className="hero-welcome-main">
+              <div className="hero-welcome-text">
+                <h2 className="display-4 callout">
+                  Achieve <span className="callouttext">Savings Goals</span>{' '}
+                  With Community
+                </h2>
+                <h6 className="display-6 text-black"></h6>
+                <p className="lead text-black font-weight-light">
+                  {' '}
+                  <span>
+                    "Susus" thrive on the power of community. Friends, family
+                    members, and like-minded individuals come together,
+                    contributing money regularly. Here's the magic: Each member
+                    takes turns receiving the entire pooled amount. It's a
+                    simple yet effective way to save and provide mutual
+                    financial support within your social network.
+                    <br></br>
+                    <br></br>
+                    <Typed
+                      loop
+                      strings={ROLES}
+                      typeSpeed={50}
+                      backSpeed={80}
+                      backDelay={3000}
+                      loopCout={0}
+                      showCursor
+                      className="self-typed"
+                      cursorChar="|"
+                    ></Typed>{' '}
+                  </span>
                   <br></br>
-                  <br></br>
-                  <Typed
-                    loop
-                    strings={ROLES}
-                    typeSpeed={50}
-                    backSpeed={80}
-                    backDelay={3000}
-                    loopCout={0}
-                    showCursor
-                    className="self-typed"
-                    cursorChar="|"
-                  ></Typed>{' '}
-                </span>
-                <br></br>
-                {/* <span className="h3">
+                  {/* <span className="h3">
                   Fostering Community Cohesion through Local Savings
                 </span> */}
-              </p>
-            </div>
-            <br></br>
-            <Link href="/info">
-              <Button
-                style={{
-                  backgroundColor: '#fff',
-                  color: '#02CD08',
-                  fontFamily: 'avenir',
-                }}
-                size="lg"
-              >
-                Learn More
-              </Button>{' '}
-            </Link>
-            <Link href="/earlyaccess">
-              <Button
-                style={{
-                  backgroundColor: '#fff',
-                  color: '#000',
-                  fontFamily: 'avenir',
-                }}
-                size="lg"
-              >
-                Early Access
-              </Button>{' '}
-            </Link>
+                </p>
+              </div>
+              <br></br>
+              <Link href="/info">
+                <Button
+                  style={{
+                    backgroundColor: '#fff',
+                    color: '#02CD08',
+                    fontFamily: 'avenir',
+                  }}
+                  size="lg"
+                >
+                  Learn More
+                </Button>{' '}
+              </Link>
+              <Link href="/earlyaccess">
+                <Button
+                  style={{
+                    backgroundColor: '#fff',
+                    color: '#000',
+                    fontFamily: 'avenir',
+                  }}
+                  size="lg"
+                >
+                  Early Access
+                </Button>{' '}
+              </Link>
 
-            <div className="hero-welcome-bio">
-              <p className="mb-2 text-white">
-                * *only availible to downlad via chrome browser
-              </p>
-              {/* <div className="socialIcons">
+              <div className="hero-welcome-bio">
+                <p className="mb-2 text-white">
+                  * *only availible to downlad via chrome browser
+                </p>
+                {/* <div className="socialIcons">
                     <p>Follow Us</p>
                     <SocialIcon
                       url="https://www.facebook.com/Marin-County-Cooperation-Teams-110632247349694/"
@@ -141,35 +136,36 @@ export default function Index() {
                       bgColor="#438DCD"
                     />
                   </div> */}
+              </div>
             </div>
-          </div>
-        </Col>
+          </Col>
 
+          <Col
+            md="4"
+            sm="12"
+            xs="12"
+            className="hero-welcome-wrapper d-flex justify-content-end"
+          >
+            <img
+              style={{ height: '500px', width: '275px' }}
+              src="/images/device.png"
+            />
+          </Col>
+        </Row>
         <Col
-          md="4"
-          sm="12"
-          xs="12"
-          className="hero-welcome-wrapper d-flex justify-content-end"
+          md="12"
+          lg="12"
+          sm="9"
+          xs="9"
+          className="power-text d-flex justify-content-end"
         >
-          <img
-            style={{ height: '500px', width: '275px' }}
-            src="/images/device.png"
-          />
+          <b> Powered By: &nbsp; </b>{' '}
+          <Link className="linkStyles" href="https://onyxcreativelabs.com">
+            {' '}
+            Onyx Creative Labs{' '}
+          </Link>
         </Col>
-      </Row>
-      <Col
-        md="12"
-        lg="12"
-        sm="9"
-        xs="9"
-        className="power-text d-flex justify-content-end"
-      >
-        <b> Powered By: &nbsp; </b>{' '}
-        <Link className="linkStyles" href="https://onyxcreativelabs.com">
-          {' '}
-          Onyx Creative Labs{' '}
-        </Link>
-      </Col>
-    </Container>
+      </Container>
+    </BaseLayout>
   );
 }

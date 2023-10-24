@@ -6,7 +6,7 @@
   z-index: 15;
   padding: 20px 20px;
   position: absolute;
-  background-color: #285476;
+  background-color: #fff;
 
   .port-navbar {
     &-brand {
@@ -94,8 +94,19 @@
       }
 
       .port-navbar.port-default {
-        background-color: #285476;
+        background-color: #000;
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+  .port-navbar.port-default .port-navbar-link {
+    color: #000;
+  }
+  
+
+}
+.navbar-toggler {
+  background-color: #000;
 }

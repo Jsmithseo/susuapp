@@ -115,11 +115,11 @@ export default function Thankyou() {
               </p>
             </div>
           </Col>
-          <Link href="#">
+          {/* <Link href="#">
             <Col className="investorLink" md="12" lg="12">
               Become An Investor
             </Col>
-          </Link>
+          </Link> */}
         </Row>
       </Container>
     </div>

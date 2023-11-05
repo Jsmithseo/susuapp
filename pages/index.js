@@ -1,16 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import Logo from '../public/logo.PNG';
-import ContactUs from './components/ContactUsform';
 import { jsx } from '@emotion/react';
 import styled from '@emotion/styled';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-// import MaterialContactform from './components/MaterialContactform';
+
 import Link from 'next/link';
 import Typed from 'react-typed';
-import BaseLayout from './components/layouts/BaseLayouts.js';
+import BaseLayout from '../components/layouts/BaseLayouts';
 
 import { Row, Col, Button } from 'reactstrap';
 
@@ -94,7 +93,7 @@ export default function Index() {
                 </p>
               </div>
               <br></br>
-              <Link href="/info">
+              <Link legacyBehavior href="/info">
                 <Button
                   style={{
                     backgroundColor: '#fff',
@@ -104,9 +103,9 @@ export default function Index() {
                   size="lg"
                 >
                   Learn More
-                </Button>{' '}
+                </Button>
               </Link>
-              <Link href="/earlyaccess">
+              <Link legacyBehavior href="/earlyaccess">
                 <Button
                   style={{
                     backgroundColor: '#fff',
@@ -116,7 +115,7 @@ export default function Index() {
                   size="lg"
                 >
                   Early Access
-                </Button>{' '}
+                </Button>
               </Link>
 
               <div className="hero-welcome-bio">
@@ -160,9 +159,8 @@ export default function Index() {
           className="power-text d-flex justify-content-end"
         >
           <b> Powered By: &nbsp; </b>{' '}
-          <Link className="linkStyles" href="https://onyxcreativelabs.com">
-            {' '}
-            Onyx Creative Labs{' '}
+          <Link legacyBehavior className="linkStyles" href="https://onyxcreativelabs.com">
+            Onyx Creative Labs
           </Link>
         </Col>
       </Container>

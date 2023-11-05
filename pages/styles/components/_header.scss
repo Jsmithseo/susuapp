@@ -10,7 +10,7 @@
 
   .port-navbar {
     &-brand {
-      color: white;
+      color: #000;
       font-size: 24px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -39,7 +39,7 @@
 
     .port-navbar {
       &-brand {
-        color: white;
+        color: #000;
         font-size: 24px;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -51,7 +51,7 @@
       }
 
       &-link {
-        color: white;
+        color: #000;
 
         letter-spacing: 0.8px;
         text-transform: uppercase;
@@ -61,7 +61,7 @@
           }
 
           .port-dropdown-item {
-            color: #4e4e4e;
+            color: #000;
 
             &.active {
               color: #dba919;
@@ -109,4 +109,9 @@
 }
 .navbar-toggler {
   background-color: #fff;
+}
+
+
+.port-navbar-link {
+  color: #000!important;
 }

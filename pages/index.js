@@ -1,169 +1,80 @@
-import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
-import Logo from '../public/logo.PNG';
-import { jsx } from '@emotion/react';
-import styled from '@emotion/styled';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-
 import Link from 'next/link';
-import Typed from 'react-typed';
-import BaseLayout from '../components/layouts/BaseLayouts';
+import styles from './styles/SusuHome.module.css';
 
-import { Row, Col, Button } from 'reactstrap';
-
-const ROLES = [
-  'Families',
-  'Nonprofit Organizations',
-  'Savers on a Budget',
-  'Environmental Enthusiasts',
-  'Students and Young Adults',
-  'Low to Moderate-Income Earners',
-  'Entrepreneurs and Small Business Owners',
-  'Retirees and Seniors',
-  'Community Members',
-  'Philanthropic Individuals',
-  'Nature and Conservation Enthusiasts',
-  'Disability',
-  'Local Initiatives and Startups',
+const steps = [
+  { number: '01', title: 'Create your circle', description: 'Invite people you trust and agree on a contribution amount, cadence, and payout order.' },
+  { number: '02', title: 'Contribute together', description: 'Everyone makes the same scheduled contribution, making the goal feel achievable week by week.' },
+  { number: '03', title: 'Take your turn', description: 'Each member receives the pooled amount when it is their turn—turning consistency into momentum.' },
 ];
 
-export default function Index() {
-  const MainStyle = {
-    overflowX: 'hidden',
-  };
+const stats = [
+  { value: '45%', label: 'of U.S. adults did not have three months of emergency savings in 2024.' },
+  { value: '1 in 3', label: 'adults said they could not cover three months of expenses by any means after losing their main income.' },
+  { value: '63%', label: 'would pay a $400 emergency expense using cash or its equivalent.' },
+];
 
-  const companyTitle = {
-    textAlign: 'center',
-    fontFamily: 'avenir',
-  };
-
-  const copy = {
-    textAlign: 'center',
-    fontSize: '30px',
-    fontFamily: 'avenir',
-  };
+export default function Home() {
   return (
-    <BaseLayout>
-      <Container>
-        <Row className="brandContainer">
-          <Col md="7" lg="7" sm="8">
-        </Col>
-          <Col
-            md="7"
-            lg="7"
-            sm="12"
-            className="hero-welcome-wrapper d-flex align-items-center justify-content-start"
-          >
-            <div className="hero-welcome-main">
-              <div className="hero-welcome-text">
-                <h2 className="display-4 callout">
-                  Achieve <span className="callouttext">Savings Goals</span>{' '}
-                  With Community
-                </h2>
-                <h6 className="display-6 text-black"></h6>
-                <p className="lead text-black font-weight-light">
-                  {' '}
-                  <span>
-                    "Susus" thrive on the power of community. Friends, family
-                    members, and like-minded individuals come together,
-                    contributing money regularly. Here's the magic: Each member
-                    takes turns receiving the entire pooled amount. It's a
-                    simple yet effective way to save and provide mutual
-                    financial support within your social network.
-                    <br></br>
-                    <br></br>
-                    <Typed
-                      loop
-                      strings={ROLES}
-                      typeSpeed={50}
-                      backSpeed={80}
-                      backDelay={3000}
-                      loopCout={0}
-                      showCursor
-                      className="self-typed"
-                      cursorChar="|"
-                    ></Typed>{' '}
-                  </span>
-                  <br></br>
-                  {/* <span className="h3">
-                  Fostering Community Cohesion through Local Savings
-                </span> */}
-                </p>
-              </div>
-              <br></br>
-              <Link legacyBehavior href="/info">
-                <Button
-                  style={{
-                    backgroundColor: '#fff',
-                    color: '#02CD08',
-                    fontFamily: 'avenir',
-                  }}
-                  size="lg"
-                >
-                  Learn More
-                </Button>
-              </Link>
-              <Link legacyBehavior href="/earlyaccess">
-                <Button
-                  style={{
-                    backgroundColor: '#fff',
-                    color: '#000',
-                    fontFamily: 'avenir',
-                  }}
-                  size="lg"
-                >
-                  Early Access
-                </Button>
-              </Link>
+    <>
+      <Head>
+        <title>SuSuFi | Save together. Move forward.</title>
+        <meta name="description" content="SuSuFi helps trusted circles turn a shared savings habit into real momentum." />
+      </Head>
+      <main className={styles.page}>
+        <nav className={styles.nav} aria-label="Main navigation">
+          <Link href="/" className={styles.brand} aria-label="SuSuFi home"><span className={styles.brandMark}>S</span><span>SuSuFi</span></Link>
+          <div className={styles.navActions}>
+            <a href="#how-it-works" className={styles.textLink}>How it works</a>
+            <Link href="/api/v1/login" className={styles.loginLink}>Log in</Link>
+            <Link href="/earlyaccess" className={styles.navCta}>Get early access</Link>
+          </div>
+        </nav>
 
-              <div className="hero-welcome-bio">
-                <p className="mb-2 text-white">
-                  * *only availible to downlad via chrome browser
-                </p>
-                {/* <div className="socialIcons">
-                    <p>Follow Us</p>
-                    <SocialIcon
-                      url="https://www.facebook.com/Marin-County-Cooperation-Teams-110632247349694/"
-                      network="facebook"
-                      bgColor="#438DCD"
-                    />
-                    <SocialIcon
-                      url="https://instagram.com/marincountycooperationteam?igshid=1aqmiwepeowdr"
-                      network="instagram"
-                      bgColor="#438DCD"
-                    />
-                  </div> */}
-              </div>
+        <section className={styles.hero}>
+          <div className={styles.heroCopy}>
+            <p className={styles.eyebrow}><span /> Community-powered saving</p>
+            <h1>Saving feels different when you are <em>not doing it alone.</em></h1>
+            <p className={styles.lede}>SuSuFi brings the time-tested Susu savings circle into one clear, modern place—so your people can build a shared rhythm and move toward what matters.</p>
+            <div className={styles.heroActions}>
+              <Link href="/earlyaccess" className={styles.primaryCta}>Join the early access list <span aria-hidden="true">→</span></Link>
+              <a href="#how-it-works" className={styles.secondaryCta}>See how a Susu works</a>
             </div>
-          </Col>
+            <div className={styles.trustLine}><span className={styles.avatarStack} aria-hidden="true"><i>J</i><i>M</i><i>A</i></span><span>Built for the people you already trust.</span></div>
+          </div>
+          <div className={styles.heroVisual} aria-label="SuSuFi app preview">
+            <div className={styles.orbOne} /><div className={styles.orbTwo} />
+            <div className={styles.phoneFrame}><Image src="/images/device.png" alt="SuSuFi app experience" width={824} height={1326} priority /></div>
+            <div className={styles.floatingCard}><span className={styles.cardIcon}>✓</span><div><b>Circle contribution</b><small>On track for Friday</small></div></div>
+          </div>
+        </section>
 
-          <Col
-            md="4"
-            sm="12"
-            xs="12"
-            className="hero-welcome-wrapper d-flex justify-content-end"
-          >
-            <img
-              style={{ height: '500px', width: '275px' }}
-              src="/images/device.png"
-            />
-          </Col>
-        </Row>
-        <Col
-          md="12"
-          lg="12"
-          sm="9"
-          xs="9"
-          className="power-text d-flex justify-content-end"
-        >
-          <b> Powered By: &nbsp; </b>{' '}
-          <Link legacyBehavior className="linkStyles" href="https://onyxcreativelabs.com">
-            Onyx Creative Labs
-          </Link>
-        </Col>
-      </Container>
-    </BaseLayout>
+        <section className={styles.intro}>
+          <p className={styles.sectionLabel}>The simple idea</p>
+          <div><h2>A Susu turns a shared promise into a savings practice.</h2><p>Small, regular contributions add up. With a trusted group, each person contributes on a schedule and takes a turn receiving the pooled amount. It is saving with structure, visibility, and community behind it.</p></div>
+        </section>
+
+        <section className={styles.steps} id="how-it-works">
+          <div className={styles.sectionHeading}><p className={styles.sectionLabel}>How SuSuFi works</p><h2>Good money habits, made more human.</h2></div>
+          <div className={styles.stepGrid}>{steps.map((step) => <article className={styles.stepCard} key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.description}</p></article>)}</div>
+        </section>
+
+        <section className={styles.why}>
+          <div className={styles.whyCopy}>
+            <p className={styles.sectionLabel}>Why it matters</p><h2>A little structure can make room for a lot more possibility.</h2>
+            <p>Saving is not only about willpower. It is about making a plan that is visible, repeatable, and connected to the people rooting for you.</p>
+            <a className={styles.sourceLink} href="https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-savings-and-investments.htm" target="_blank" rel="noreferrer">Explore the Federal Reserve’s 2024 savings data <span aria-hidden="true">↗</span></a>
+          </div>
+          <div className={styles.statsGrid}>{stats.map((stat) => <article className={styles.stat} key={stat.value}><strong>{stat.value}</strong><p>{stat.label}</p></article>)}</div>
+        </section>
+
+        <section className={styles.closing}>
+          <div className={styles.closingGlow} /><p className={styles.sectionLabel}>A better way to begin</p><h2>Your next goal does not have to be a solo mission.</h2>
+          <p>Be among the first to help shape SuSuFi and bring your savings circle together.</p><Link href="/earlyaccess" className={styles.primaryCta}>Get early access <span aria-hidden="true">→</span></Link>
+        </section>
+        <footer className={styles.footer}><Link href="/" className={styles.brand}><span className={styles.brandMark}>S</span><span>SuSuFi</span></Link><p>Community-powered saving, thoughtfully designed.</p><Link href="/api/v1/login">Log in</Link></footer>
+      </main>
+    </>
   );
 }

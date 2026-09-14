@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from './styles/SusuHome.module.css';
+import visualStyles from './styles/SusuHeroVisual.module.css';
 
 const steps = [
   { number: '01', title: 'Create your circle', description: 'Invite people you trust and agree on a contribution amount, cadence, and payout order.' },
@@ -36,16 +36,29 @@ export default function Home() {
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}><span /> Community-powered saving</p>
             <h1>Saving feels different when you are <em>not doing it alone.</em></h1>
-            <p className={styles.lede}>SuSuFi brings the time-tested Susu savings circle into one clear, modern place—so your people can build a shared rhythm and move toward what matters.</p>
+            <p className={`${styles.lede} ${visualStyles.lede}`}>
+              <span>SuSuFi brings the time-tested Susu savings circle into one clear, modern place—</span>
+              <span>so your people can build a shared rhythm</span>
+              <span>and move toward what matters.</span>
+            </p>
             <div className={styles.heroActions}>
               <Link href="/earlyaccess" className={styles.primaryCta}>Join the early access list <span aria-hidden="true">→</span></Link>
               <a href="#how-it-works" className={styles.secondaryCta}>See how a Susu works</a>
             </div>
             <div className={styles.trustLine}><span className={styles.avatarStack} aria-hidden="true"><i>J</i><i>M</i><i>A</i></span><span>Built for the people you already trust.</span></div>
           </div>
-          <div className={styles.heroVisual} aria-label="SuSuFi app preview">
+          <div className={`${styles.heroVisual} ${visualStyles.heroVisual}`} aria-label="Illustration of a SuSuFi savings circle">
             <div className={styles.orbOne} /><div className={styles.orbTwo} />
-            <div className={styles.phoneFrame}><Image src="/images/device.png" alt="SuSuFi app experience" width={824} height={1326} priority /></div>
+            <div className={visualStyles.savingsOrbit} aria-hidden="true">
+              <span className={visualStyles.orbitMember}>A</span><span className={visualStyles.orbitMember}>J</span><span className={visualStyles.orbitMember}>M</span><span className={visualStyles.orbitMember}>R</span>
+            </div>
+            <div className={visualStyles.circleCard}>
+              <div className={visualStyles.cardTopline}><span className={visualStyles.cardSpark}>✦</span><span>THIS MONTH'S CIRCLE</span></div>
+              <strong>Move forward,<br />together.</strong>
+              <div className={visualStyles.progressRow}><span>4 of 5 contributions</span><b>80%</b></div>
+              <div className={visualStyles.progressTrack}><i /></div>
+              <div className={visualStyles.payout}><span>Next payout</span><b>Friday</b><em>→</em></div>
+            </div>
             <div className={styles.floatingCard}><span className={styles.cardIcon}>✓</span><div><b>Circle contribution</b><small>On track for Friday</small></div></div>
           </div>
         </section>

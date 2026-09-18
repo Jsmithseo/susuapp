@@ -2,17 +2,30 @@
 
 import { initAuth0 } from '@auth0/nextjs-auth0';
 
+// Public pages are rendered during the build without Auth0 secrets. Delay
+// configuration until an auth or protected route actually needs a session.
+let auth0Client;
 
-const auth0 = initAuth0({
-  authorizationParams: {
-    scope: 'openid profile',
+const getAuth0 = () => {
+  if (!auth0Client) {
+    auth0Client = initAuth0({
+      authorizationParams: { scope: 'openid profile' },
+    });
   }
-});
+  return auth0Client;
+};
+
+const auth0 = {
+  getSession: (...args) => getAuth0().getSession(...args),
+  handleCallback: (...args) => getAuth0().handleCallback(...args),
+  handleLogin: (...args) => getAuth0().handleLogin(...args),
+  handleLogout: (...args) => getAuth0().handleLogout(...args),
+};
 
 export default auth0;
 
 export function isAuthorized(user, role) {
-  return (user && user[process.env.AUTH0_NAMESPACE + '/roles'].includes(role));
+  return Boolean(user?.[process.env.AUTH0_NAMESPACE + '/roles']?.includes(role));
 }
 
 export const authorizeUser = async (req, res) => {

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from './styles/SusuHome.module.css';
 import visualStyles from './styles/SusuHeroVisual.module.css';
+import layoutStyles from './styles/SusuLayout.module.css';
 
 const steps = [
   { number: '01', title: 'Create your circle', description: 'Invite people you trust and agree on a contribution amount, cadence, and payout order.' },
@@ -48,29 +49,21 @@ export default function Home() {
             <div className={styles.trustLine}><span className={styles.avatarStack} aria-hidden="true"><i>J</i><i>M</i><i>A</i></span><span>Built for the people you already trust.</span></div>
           </div>
           <div className={`${styles.heroVisual} ${visualStyles.heroVisual}`} aria-label="Illustration of a SuSuFi savings circle">
-            <div className={styles.orbOne} /><div className={styles.orbTwo} />
-            <div className={visualStyles.savingsOrbit} aria-hidden="true">
-              <span className={visualStyles.orbitMember}>A</span><span className={visualStyles.orbitMember}>J</span><span className={visualStyles.orbitMember}>M</span><span className={visualStyles.orbitMember}>R</span>
-            </div>
-            <div className={visualStyles.circleCard}>
-              <div className={visualStyles.cardTopline}><span className={visualStyles.cardSpark}>✦</span><span>THIS MONTH'S CIRCLE</span></div>
-              <strong>Move forward,<br />together.</strong>
-              <div className={visualStyles.progressRow}><span>4 of 5 contributions</span><b>80%</b></div>
-              <div className={visualStyles.progressTrack}><i /></div>
-              <div className={visualStyles.payout}><span>Next payout</span><b>Friday</b><em>→</em></div>
-            </div>
-            <div className={styles.floatingCard}><span className={styles.cardIcon}>✓</span><div><b>Circle contribution</b><small>On track for Friday</small></div></div>
+            <div className={visualStyles.heroHalo} />
+            <div className={visualStyles.goalPanel}><div className={visualStyles.goalPanelTop}><span>YOUR CIRCLE</span><b>5 people</b></div><div className={visualStyles.goalTitle}>One shared goal.<br /><em>Every week.</em></div><div className={visualStyles.memberRow} aria-hidden="true"><i>A</i><i>J</i><i>M</i><i>R</i><i>+</i></div><div className={visualStyles.goalFooter}><span>Weekly saving</span><strong>$125</strong></div></div>
+            <div className={visualStyles.goalTag}><span className={visualStyles.goalCheck}>✓</span><div><b>Next contribution</b><small>Friday, 9:00 AM</small></div></div>
+            <div className={visualStyles.goalCoin} aria-hidden="true">$</div>
           </div>
         </section>
 
         <section className={styles.intro}>
-          <p className={styles.sectionLabel}>The simple idea</p>
+          <div className={visualStyles.introVisual} aria-hidden="true"><p className={styles.sectionLabel}>The simple idea</p><div className={visualStyles.flowGraphic}><span className={visualStyles.flowPerson}>A</span><span className={visualStyles.flowPerson}>J</span><span className={visualStyles.flowPerson}>M</span><div className={visualStyles.flowPool}><small>THE POOL</small><b>$625</b></div><span className={visualStyles.flowArrow}>→</span><div className={visualStyles.flowGoal}>Your turn<br /><strong>is coming</strong></div></div></div>
           <div><h2>A Susu turns a shared promise into a savings practice.</h2><p>Small, regular contributions add up. With a trusted group, each person contributes on a schedule and takes a turn receiving the pooled amount. It is saving with structure, visibility, and community behind it.</p></div>
         </section>
 
         <section className={styles.steps} id="how-it-works">
           <div className={styles.sectionHeading}><p className={styles.sectionLabel}>How SuSuFi works</p><h2>Good money habits, made more human.</h2></div>
-          <div className={styles.stepGrid}>{steps.map((step) => <article className={styles.stepCard} key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.description}</p></article>)}</div>
+          <div className={styles.stepGrid}>{steps.map((step) => <article className={`${styles.stepCard} ${layoutStyles.stepCard}`} key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.description}</p></article>)}</div>
         </section>
 
         <section className={styles.why}>
@@ -79,7 +72,7 @@ export default function Home() {
             <p>Saving is not only about willpower. It is about making a plan that is visible, repeatable, and connected to the people rooting for you.</p>
             <a className={styles.sourceLink} href="https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-savings-and-investments.htm" target="_blank" rel="noreferrer">Explore the Federal Reserve’s 2024 savings data <span aria-hidden="true">↗</span></a>
           </div>
-          <div className={styles.statsGrid}>{stats.map((stat) => <article className={styles.stat} key={stat.value}><strong>{stat.value}</strong><p>{stat.label}</p></article>)}</div>
+          <div className={styles.statsGrid}>{stats.map((stat) => <article className={`${styles.stat} ${layoutStyles.stat}`} key={stat.value}><strong>{stat.value}</strong><p>{stat.label}</p></article>)}</div>
         </section>
 
         <section className={styles.closing}>
